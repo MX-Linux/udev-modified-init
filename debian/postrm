@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# postrm script for udev-modified-init
+
+#set -e
+
+case "$1" in
+  purge|remove) dpkg-divert --quiet                                               \
+                            --remove                                              \
+                            --package udev-modified-init               \
+                            --rename       \
+                            --divert /etc/init.d/udev.dpkg-distrib \
+                            /etc/init.d/udev
+                ;;
+
+             *) :
+                ;;
+esac 
+
+exit 0

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# preinst script for udev-modified-init
+
+#set -e
+
+case "$1" in
+  install|upgrade) dpkg-divert --quiet                                               \
+                               --add                                                 \
+                               --package udev-modified-init            \
+                               --rename                              \
+                               --divert /etc/init.d/udev.dpkg-distrib \
+                               /etc/init.d/udev
+                   ;;
+
+                *) :
+                   ;;
+esac 
+
+exit 0
