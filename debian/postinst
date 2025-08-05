@@ -8,7 +8,7 @@
 #set -e
 
 case "$1" in
-  install|upgrade) if [ ! -e /etc/init.d/udev ]; then
+  install|upgrade|configure) if [ ! -e /etc/init.d/udev ]; then
   						cp /usr/share/udev-modified-init/udev /etc/init.d/udev
   						update-rc.d udev defaults
   					fi
