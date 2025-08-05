@@ -7,5 +7,5 @@ Standards-Version: 3.9.8
 
 Package: udev-modified-init
 Architecture: all
-Depends:
+Depends: udev (>> 257.7-1)
 Description: modified udev init script for mx and antiX linux
