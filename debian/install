@@ -1,1 +1,2 @@
 udev  etc/init.d
+udev  usr/share/udev-modified-init/

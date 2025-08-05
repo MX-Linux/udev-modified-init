@@ -1,3 +1,9 @@
+udev-modified-init (25.08.01mx25) mx; urgency=medium
+
+  * replace udev if removed by another routine (debian trixie udev update)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 05 Aug 2025 17:52:20 -0400
+
 udev-modified-init (19.07.01) mx; urgency=medium
 
   * Initial release.
